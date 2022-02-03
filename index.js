@@ -26,9 +26,30 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'credits',
-    message: "Who did you collaborate with on your application?",
+    name: 'license',
+    message: "What license does your application use?",
   },
+  {
+    type: 'input',
+    name: 'contributing',
+    message: "How can someone contribute to your application?",
+  },
+  {
+    type: 'input',
+    name: 'tests',
+    message: "How can someone test your application?",
+  },
+  {
+    type: 'input',
+    name: 'questions',
+    message: "How can someone contact you regarding questions about your application?",
+  },
+  {
+    type: 'input',
+    name: 'questions',
+    message: "What is your GitHub user name?",
+  }
+  
 ];
 
 const promptUser = () => {
@@ -38,7 +59,7 @@ const promptUser = () => {
 
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
-const writeToFile = ({ title, description, installation, usage, credits}) => 
+const writeToFile = ({ title, description, installation, usage, license, contributing, tests, questions, github, email}) => 
 `#${title}
 
 ##Description
@@ -50,8 +71,10 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
 - [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 ${installation}
@@ -59,8 +82,20 @@ ${installation}
 ## Usage
 ${usage}
 
-## Credits
-${credits}`;
+## License
+${license}
+
+## Contributing
+${contributing}
+## Tests
+${tests}
+
+## Questions;
+${questions}
+
+GitHub: https://github.com/${github}
+
+Email: ${email}`
 
 // TODO: Create a function to initialize app
 const init = () => {
