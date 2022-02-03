@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generate = require('./utils/generateMarkdown')
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -25,9 +26,10 @@ const questions = [
     message: "How would a user utilize your application?",
   },
   {
-    type: 'input',
+    type: 'list',
     name: 'license',
     message: "What license does your application use?",
+    choices: ['MIT', 'GPLv2', 'GPLv3', 'Apache', 'BSD 3-clause', 'No License', 'Other']
   },
   {
     type: 'input',
@@ -41,70 +43,73 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'questions',
+    name: 'email',
     message: "How can someone contact you regarding questions about your application?",
   },
   {
     type: 'input',
-    name: 'questions',
+    name: 'github',
     message: "What is your GitHub user name?",
   }
   
 ];
 
 const promptUser = () => {
-  return inquirer.prompt(questions);
+  return inquirer.prompt(questions)
 }
+
 
 
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
-const writeToFile = ({ title, description, installation, usage, license, contributing, tests, questions, github, email}) => 
-`#${title}
-
-##Description
-${description}
-
-## Table of Contents
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
-
-## Installation
-${installation}
-
-## Usage
-${usage}
-
-## License
-${license}
-
-## Contributing
-${contributing}
-## Tests
-${tests}
-
-## Questions;
-${questions}
-
-GitHub: https://github.com/${github}
-
-Email: ${email}`
+const writeToFile = (fileName, promptData) => {
+  fs.writeFileSync(fileName, generate.generateMarkdown(promptData))
+}
 
 // TODO: Create a function to initialize app
+// function init() {}
 const init = () => {
+  //ask questions and get user input
   promptUser()
-.then((answers) => fs.writeFileSync('GENREADME.md', writeToFile(answers)))
-.then(() => console.log('Successfully wrote to GENREADME.md'))
-.catch((err) => console.error(err));
+  //return user input
 
+  .then((promptData) => {
+    console.log(promptData.title)
+    writeToFile('genreadme.md', (promptData), err => {
+      if(err){
+        console.log(err);
+    }
+    console.log('success!')
+  })
+  
+  // .then((answers) => writeToFile('readme.md', answers))
+  
+})
 }
+
+const generateHTML = ({ name, location, github, linkedin }) =>
+  `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Hi! My name is ${name}</h1>
+    <p class="lead">I am from ${location}.</p>
+    <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
+    <ul class="list-group">
+      <li class="list-group-item">My GitHub username is ${github}</li>
+      <li class="list-group-item">LinkedIn: ${linkedin}</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>`;
 
 // Function call to initialize app
 init();
