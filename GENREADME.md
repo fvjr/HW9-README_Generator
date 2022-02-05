@@ -1,4 +1,4 @@
-# 1
+# 1   
 
 ## Description
 2
@@ -9,30 +9,30 @@
 - [Credits](#credits)
 - [Contributing](#contributing)
 - [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
+Follow these steps to install this project:
 3
 
 ## Usage
+Instructions and examples for use:
 4
 
 ## License
-MIT
+No License
 
 ## Contributing
+Interested in contributing?
 5
 
 ## Tests
+Want to run tests with this project?
  6
 
-## Email 7
-## Github 8
+## Questions 
 
+Email me @ 7
+Reach me on GitHub @ https://github.com/8
 
-## LicenseBadge
-MIT
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-
-
-
+No license specified.

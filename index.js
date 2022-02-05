@@ -44,7 +44,7 @@ const questions = [
   {
     type: 'input',
     name: 'email',
-    message: "How can someone contact you regarding questions about your application?",
+    message: "What is your email address?",
   },
   {
     type: 'input',
@@ -64,7 +64,7 @@ const promptUser = () => {
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
 const writeToFile = (fileName, promptData) => {
-  fs.writeFileSync(fileName, generate.generateMarkdown(promptData))
+  fs.writeFileSync(fileName, generate(promptData))
 }
 
 // TODO: Create a function to initialize app
