@@ -30,8 +30,6 @@ function renderLicenseBadge(promptData) {
   }
   return badge
 }
-//case switch for badges
-//['MIT', 'GPLv2', 'GPLv3', 'Apache', 'BSD 3-clause', 'No License', 'Other']
 
 
 // TODO: Create a function that returns the license link
@@ -59,9 +57,6 @@ function renderLicenseLink(badge) {
   }
   return licenseLink
 }
-
-//['MIT', 'GPLv2', 'GPLv3', 'Apache', 'BSD 3-clause', 'No License', 'Other']
-
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -164,7 +159,15 @@ if (promptData.license === 'No License') {
 
 }
 
-//['MIT', 'GPLv2', 'GPLv3', 'Apache', 'BSD 3-clause', 'No License', 'Other']
+//function to render screenshot in ReadMe
+function renderScreenshot(promptData){
+if (promptData.screenshot) {
+  return `![Project mock-up image.](./Assets/Screenshot.png)`
+} else {
+  return ''
+}
+
+}
 
 
 // TODO: Create a function to generate markdown for README
@@ -180,6 +183,8 @@ ${promptData.description}
 - [Usage](#usage)
 - [Credits](#credits)
 - [Contributing](#contributing)
+- [Credits](#credits)
+- [Resources](#resources)
 - [Tests](#tests)
 - [Questions](#questions)
 
@@ -190,9 +195,16 @@ ${promptData.installation}
 ## Usage
 Instructions and examples for use:
 ${promptData.usage}
+${renderScreenshot(promptData)}
 
 ## License
 ${promptData.license}
+
+## Credits
+${promptData.credits}
+
+## Resources
+${promptData.resources}
 
 ## Contributing
 Interested in contributing?
@@ -203,7 +215,7 @@ Want to run tests with this project?
  ${promptData.tests}
 
 ## Questions 
-
+Have any questions or want to collaborate on another project? 
 Email me @ ${promptData.email}
 Reach me on GitHub @ https://github.com/${promptData.github}
 

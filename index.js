@@ -21,6 +21,11 @@ const questions = [
     message: "How does a user install your application?",
   },
   {
+    type: 'confirm',
+    name: 'screenshot',
+    message: "Want to include a screenshot? Select 'Y', Save a screenshot titled 'screenshot' in a folder titled 'Assets' in your project folder structure. The screenshot will be included in your ReadMe. If not, select 'N'.",
+  },
+  {
     type: 'input',
     name: 'usage',
     message: "How would a user utilize your application?",
@@ -31,6 +36,16 @@ const questions = [
     message: "What license does your application use?",
     choices: ['MIT', 'GPLv2', 'GPLv3', 'Apache', 'BSD 3-clause', 'No License', 'Other']
   },
+  {
+  type: 'input',
+  name: 'credits',
+  message: 'Who did you collaborate with on the project?'
+  },
+  {
+    type: 'input',
+    name: 'resources',
+    message: 'What resources did you use when developing your project?'
+    },
   {
     type: 'input',
     name: 'contributing',
