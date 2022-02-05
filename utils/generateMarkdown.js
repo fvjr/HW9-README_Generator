@@ -156,7 +156,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 //function to render screenshot in ReadMe
 function renderScreenshot(promptData) {
   if (promptData.screenshot) {
-    return `![Project mock-up image.](./assets/screenshot.png)`
+    return `![Project mock-up image.](/assets/screenshot.png)`
   } else {
     return ''
   }
