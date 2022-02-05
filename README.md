@@ -20,11 +20,11 @@ Want to install this project?
 
 ## Usage
 Instructions and examples for use:
-4
-![Project mock-up image.](./assets/screenshot.png)
+5
+![Project mock-up image.](./Assets/screenshot.png)
 
 ## Credits
-5
+
 
 ## Resources
 6
@@ -41,13 +41,13 @@ Want to run tests with this project?
 Have any questions or want to collaborate on another project? 
 Feel free to contact me!
 Email me - 9!
-Reach me on GitHub - https://github.com/4!
+Reach me on GitHub - https://github.com/7!
 
 ## License
 Apache
 
   >
-  Copyright 2022 -- Author's GitHub:4
+  Copyright 2022 -- Author's GitHub:7
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
