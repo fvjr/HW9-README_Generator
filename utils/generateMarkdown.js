@@ -31,7 +31,6 @@ function renderLicenseBadge(promptData) {
   return badge
 }
 
-
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 // function renderLicenseLink(license) {}
@@ -65,22 +64,20 @@ function renderLicenseSection(promptData) {
   if (promptData.license === 'MIT') {
     return `
     >
-    Copyright ${Date.now()} ${promptData.github}
+    Copyright ${Date.now()} -- ${promptData.github}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-End license text.
     `
   }
 
   if (promptData.license === 'GPLv2') {
     return `
     >
-    Copyright (C) 2022 ${promptData.github}
+    Copyright (C) 2022 -- ${promptData.github}
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -101,7 +98,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   if (promptData.license === 'GPLv3') {
     return `
   >
-  Copyright (C) 2022 ${promptData.github}
+  Copyright (C) 2022 -- ${promptData.github}
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -120,7 +117,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   if (promptData.license === 'Apache') {
     return `
   >
-  Copyright 22022 ${promptData.github}
+  Copyright 22022 -- ${promptData.github}
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -139,7 +136,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   if (promptData.license === 'BSD 3-clause') {
     return `
   >
-  Copyright 2022 ${promptData.github}
+  Copyright 2022 -- ${promptData.github}
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
@@ -166,9 +163,7 @@ if (promptData.screenshot) {
 } else {
   return ''
 }
-
 }
-
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(promptData) {
@@ -189,7 +184,7 @@ ${promptData.description}
 - [Questions](#questions)
 
 ## Installation
-Follow these steps to install this project:
+Want to intall this project?
 ${promptData.installation}
 
 ## Usage
