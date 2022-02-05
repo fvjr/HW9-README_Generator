@@ -212,7 +212,7 @@ Reach me on GitHub - https://github.com/${promptData.github}!
 
 ## License
 ${promptData.license}
-
+\n
 ${renderLicenseSection(promptData)}
 `;
 

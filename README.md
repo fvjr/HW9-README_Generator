@@ -35,15 +35,16 @@ Interested in contributing?
 
 ## Tests
 Want to run tests with this project?
- 78
+ 8
 
 ## Questions 
 Have any questions or want to collaborate on another project? 
 Feel free to contact me!
 Email me - 5!
-Reach me on GitHub - https://github.com/6!
+Reach me on GitHub - https://github.com/25!
 
 ## License
 No License(not recommended)
+
 
 undefined
