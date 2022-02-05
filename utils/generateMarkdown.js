@@ -188,6 +188,7 @@ ${promptData.installation}
 ## Usage
 Instructions and examples for use:
 ${promptData.usage}
+\n
 ${renderScreenshot(promptData)}
 
 ## Credits
@@ -212,7 +213,7 @@ Reach me on GitHub - https://github.com/${promptData.github}!
 
 ## License
 ${promptData.license}
-\n
+
 ${renderLicenseSection(promptData)}
 `;
 
