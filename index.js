@@ -21,11 +21,11 @@ const questions = [
     name: 'installation',
     message: "How does a user install your application?",
   },
-  {
-    type: 'confirm',
-    name: 'screenshot',
-    message: "Want to include a screenshot? Select 'Y', Save a screenshot titled 'screenshot' in a folder titled 'Assets' in your project folder structure. The screenshot will be included in your ReadMe. If not, select 'N'.",
-  },
+  // {
+  //   type: 'confirm',
+  //   name: 'screenshot',
+  //   message: "Want to include a screenshot? Select 'Y', Save a screenshot titled 'screenshot' in a folder titled 'Assets' in your project folder structure. The screenshot will be included in your ReadMe. If not, select 'N'.",
+  // },
   {
     type: 'input',
     name: 'usage',

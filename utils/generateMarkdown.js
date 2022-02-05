@@ -154,13 +154,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 }
 
 //function to render screenshot in ReadMe
-function renderScreenshot(promptData) {
-  if (promptData.screenshot) {
-    return `![Project mock-up image.](./assets/screenshot.png)`
-  } else {
-    return ''
-  }
-}
+// function renderScreenshot(promptData) {
+//   if (promptData.screenshot) {
+//     return `![Project mock-up image.](./assets/screenshot.png)`
+//   } else {
+//     return ''
+//   }
+// }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(promptData) {
@@ -188,8 +188,6 @@ ${promptData.installation}
 ## Usage
 Instructions and examples for use:
 ${promptData.usage}
-\n
-${renderScreenshot(promptData)}
 
 ## Credits
 ${promptData.credits}
