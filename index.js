@@ -34,7 +34,7 @@ const questions = [
     type: 'list',
     name: 'license',
     message: "What license does your application use?",
-    choices: ['MIT', 'GPLv2', 'GPLv3', 'Apache', 'BSD 3-clause', 'No License', 'Other']
+    choices: ['MIT', 'GPLv2', 'GPLv3', 'Apache', 'BSD 3-clause', 'No License(not recommended)']
   },
   {
   type: 'input',
@@ -89,7 +89,7 @@ const init = () => {
   .then((promptData) => {
     console.log(promptData.title)
     //write user input to file
-    writeToFile('genreadme.md', (promptData), err => {
+    writeToFile('readme.md', (promptData), err => {
       if(err){
         console.log(err);
     }

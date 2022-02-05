@@ -22,9 +22,6 @@ function renderLicenseBadge(promptData) {
     case 'No License':
       badge = ""
       break;
-    case 'Other':
-      badge = "Other"
-      break;
     default:
       badge = ""
   }
@@ -64,7 +61,7 @@ function renderLicenseSection(promptData) {
   if (promptData.license === 'MIT') {
     return `
     >
-    Copyright ${Date.now()} -- ${promptData.github}
+Copyright ${Date.now()} -- Author's GitHub:${promptData.github}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -77,7 +74,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   if (promptData.license === 'GPLv2') {
     return `
     >
-    Copyright (C) 2022 -- ${promptData.github}
+    Copyright (C) 2022 -- Author's GitHub:${promptData.github}
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -98,7 +95,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   if (promptData.license === 'GPLv3') {
     return `
   >
-  Copyright (C) 2022 -- ${promptData.github}
+  Copyright (C) 2022 -- Author's GitHub:${promptData.github}
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -117,7 +114,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   if (promptData.license === 'Apache') {
     return `
   >
-  Copyright 22022 -- ${promptData.github}
+  Copyright 2022 -- Author's GitHub:${promptData.github}
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -136,7 +133,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   if (promptData.license === 'BSD 3-clause') {
     return `
   >
-  Copyright 2022 -- ${promptData.github}
+  Copyright 2022 -- Author's GitHub:${promptData.github}
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
@@ -150,19 +147,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
   `
   }
 
-if (promptData.license === 'No License') {
-  return `License: No license specified.`
-}
-
+  if (promptData.license === 'No License') {
+    return ``
+  }
 }
 
 //function to render screenshot in ReadMe
-function renderScreenshot(promptData){
-if (promptData.screenshot) {
-  return `![Project mock-up image.](./Assets/Screenshot.png)`
-} else {
-  return ''
-}
+function renderScreenshot(promptData) {
+  if (promptData.screenshot) {
+    return `![Project mock-up image.](./Assets/Screenshot.png)`
+  } else {
+    return ''
+  }
 }
 
 // TODO: Create a function to generate markdown for README
@@ -182,18 +178,16 @@ ${promptData.description}
 - [Resources](#resources)
 - [Tests](#tests)
 - [Questions](#questions)
+- [License](#license)
 
 ## Installation
-Want to intall this project?
+Want to install this project?
 ${promptData.installation}
 
 ## Usage
 Instructions and examples for use:
 ${promptData.usage}
 ${renderScreenshot(promptData)}
-
-## License
-${promptData.license}
 
 ## Credits
 ${promptData.credits}
@@ -211,9 +205,12 @@ Want to run tests with this project?
 
 ## Questions 
 Have any questions or want to collaborate on another project? 
-Email me @ ${promptData.email}
-Reach me on GitHub @ https://github.com/${promptData.github}
+Feel free to contact me!
+Email me - ${promptData.email}!
+Reach me on GitHub - https://github.com/${promptData.github}!
 
+## License
+${promptData.license}
 ${renderLicenseSection(promptData)}
 `;
 
