@@ -1,7 +1,7 @@
-# 11111111   
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# ReadMe Generator!   
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Description
-22222222
+Used to make quick, easy, and great ReadMe files!
 
 ## Table of Contents
 - [Installation](#installation)
@@ -16,48 +16,45 @@
 
 ## Installation
 Want to install this project?
-33333333
+Clone from my github repo 
 
 ## Usage
 Instructions and examples for use:
-4444444
+Use it to make great and easy ReadMe files!
 ![Project mock-up image.](./Assets/Screenshot.png)
 
 ## Credits
-55555555
+N/A 
 
 ## Resources
-66666666
+coding-boot-camp.github.io/, W3 Schools, https://www.npmjs.com/package/inquirer, https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 
 ## Contributing
 Interested in contributing?
-7777777
+Reach out to me via email or gitHub 
 
 ## Tests
 Want to run tests with this project?
- 88888888
+ Test it after cloning the repo 
 
 ## Questions 
 Have any questions or want to collaborate on another project? 
 Feel free to contact me!
-Email me - 9999!
-Reach me on GitHub - https://github.com/10!
+Email me - vasquezjrf@gmail.com!
+Reach me on GitHub - https://github.com/fvjr !
 
 ## License
-Apache
+MIT
 
-  >
-  Copyright 2022 -- Author's GitHub:10
+    >
+Copyright 2022 -- Author's GitHub:fvjr 
 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-    http://www.apache.org/licenses/LICENSE-2.0
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
-  
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    
+
+Walkthrough Video Link:
+https://watch.screencastify.com/v/OwJ6IqTnsYuqYmAYXLt3
